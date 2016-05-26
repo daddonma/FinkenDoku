@@ -23,7 +23,8 @@ if ($result->num_rows > 0) {
         $landkreis = trim($row['Landkreis']);
         $bundesland = trim($row['Bundesland']);
         
-        $sql_update = utf8_encode("UPDATE bundesland SET Identifier = '".$identifier."', Stadt='".$stadt."', Landkreis ='".$landkreis."', Bundesland = '".$bundesland."' WHERE id=".$id.";");
+        echo $id . " " . $identifier . " ". $stadt . " ". $landkreis . " ". $bundesland . "<br>";
+       /* $sql_update = utf8_encode("UPDATE bundesland SET Identifier = '".$identifier."', Stadt='".$stadt."', Landkreis ='".$landkreis."', Bundesland = '".$bundesland."' WHERE id=".$id.";");
         echo $sql_update;
         if(mysqli_query($conn, $sql_update)==true) {
             echo "success";
@@ -31,7 +32,7 @@ if ($result->num_rows > 0) {
             echo "error";
         }
        ;
-        echo "<br>";
+        echo "<br>";*/
     }
 } else {
     echo "0 results";
